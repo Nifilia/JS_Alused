@@ -96,7 +96,7 @@ val = Number(false);
 val = Number(null);
 //Text to number
 val = Number("Tere");
-//Massiv to number
+//Array to number
 val = Number([1, 2, 3, 4, 5]);
 
 //String to number
@@ -188,3 +188,57 @@ let html2 =
 
 console.log(html2);
 document.body.innerHTML = html2;
+
+//Array but advanced
+const numbers1 = [43, 56, 21, 79, 32];
+const numbers2 = new Array(22, 98, 9, 21, 65);
+const fruits = ["Strawberry", "Apple", "Orange", "Cherry", "Pear"];
+const mixed = [24, "Sõnad", true, undefined, null, {a:1, b:2}, new Date()];
+
+let val3;
+//Indexing
+val3 = numbers1.length;
+val3 = Array.isArray(numbers1);
+val3 = numbers1[3];
+val3 = numbers2[0];
+
+numbers1[2] = 100;
+//Adding / subtracting all that good stuff
+val3 = numbers1.indexOf(36);
+numbers1.push(250);
+numbers1.unshift(125);
+numbers1.pop();
+numbers1.shift();
+
+console.log(numbers1);
+console.log(typeof numbers1);
+
+console.log(numbers2);
+console.log(typeof numbers2);
+
+console.log(fruits);
+console.log(typeof fruits);
+
+console.log(mixed);
+console.log(typeof mixed);
+
+console.log(val3);
+console.log(numbers1);
+
+//numbers1.splice(1, 3);
+numbers1.reverse();
+//Even more things with arrays
+val3 = numbers1.concat(numbers2);
+val3 = fruits.sort();
+val3 = numbers1;
+
+console.log(val3);
+//Sorting with functions
+val3 = numbers1.sort(function(x, y){
+	return x - y;
+});
+val3 = numbers1.sort(function(x, y){
+	return y - x;
+});
+
+console.log(val3);
