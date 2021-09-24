@@ -126,3 +126,65 @@ result = Math.min(90, 190, 100, 250, 3000);
 result = Math.max(90, 190, 100, 250, 3000);
 result = Math.round(Math.random() * 11);
 console.log(result);
+
+//Absolute mess
+const name4 = "Andero Ilmar ";
+const surname = "Kõre";
+const age2 = "17";
+const text = "Tere! Olen Andero";
+const tag = "Tarkvaraarendus, Ajalugu ja Tehnika";
+let val2;
+
+//Concatenation
+val2 = name + " " + surname;
+//Append
+val2 = "Andero Ilmar ";
+val2 += surname;
+val2 = text + " Minu tegevusalad on " + tag;
+//Change case / name messing
+val2 = name.toUpperCase();
+val2 = surname.toLowerCase();
+//When found
+val2 = surname[0];
+val2 = surname.indexOf("a");
+val2 = surname.lastIndexOf("õ");
+//When char and length of object
+val2 = surname.charAt(2);
+val2 = surname.charAt(surname.length - 1);
+//Slicing and chainging the length
+//val2 = surname.subString(0, 4);
+val2 = surname.slice(0, 4);
+val2 = surname.slice(-3);
+//Spliting to make nicer
+val2 = tag.split(",");
+console.log(val2);
+
+//ES 5
+const name5 = "Andero Ilmar Kõre";
+const age3 = "17";
+const job = "Student";
+const city = "Tartu";
+
+let html1;
+
+html1 = "<ul>" +
+			"<li>" + name5 + "</li>" +
+			"<li>" + age3 + "</li>" +
+			"<li>" + job + "</li>" +
+			"<li>" + city + "</li>" +
+		"</ul>";
+
+console.log(html1);
+document.body.innerHTML = html1;
+
+//ES 6
+let html2 = 
+`<ul>
+	<li>name5: ${name5}</li>
+	<li>age3: ${age3}</li>
+	<li>job: ${job}</li>
+	<li>city: ${city}</li>
+</ul>`
+
+console.log(html2);
+document.body.innerHTML = html2;
