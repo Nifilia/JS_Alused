@@ -242,3 +242,68 @@ val3 = numbers1.sort(function(x, y){
 });
 
 console.log(val3);
+
+//Creating a person again
+const sapiens = {
+	firstName: "Kadi",
+	lastName: "Tamm",
+	sapAge: "36",
+	email: "kadli.tamm@gmail.com",
+	hobbies: ["Music", "Sport"],
+	address: {
+		sapCity: "Tallinn",
+		county: "Harjumaa",
+	},
+	getBirthYear: function(){
+		return 2021 - this.sapAge;
+	},
+};
+
+let val4;
+
+/*val4 = sapiens;
+val4 = sapiens.firstName;
+val4 = sapiens["lastName"];
+val4 = sapiens.sapAge;
+val4 = sapiens.hobbies[1];
+val4 = sapiens.address["sapCity"];
+val4 = sapiens.getBirthYear();
+console.log(sapiens);
+
+const multiSapiens = [
+	{name: "Kadi", age: 36},
+	{name: "Kadi", age: 38},
+	{name: "Kadi", age: 23},
+]
+
+val4 = multiSapiens;
+for(let i = 0; i < multiSapiens.length; i++){
+	console.lop(multiSapiens[i].name);
+}
+*/
+//Time things
+let val5;
+
+const today2 = new Date();
+val5 = today.getMonth();
+val5 = today.getDate();
+val5 = today.getDay();
+val5 = today.getFullYear();
+val5 = today.getHours();
+val5 = today.getMinutes();
+val5 = today.getSeconds();
+val5 = today.getMilliseconds();
+val5 = today.getTime();
+
+let birthDay = new Date("09/27/2001 11:00:00");
+birthDay = new Date("September 27 2001");
+
+birthDay.setMonth(2);
+birthDay.setDate(12);
+birthDay.setFullYear(2002);
+birthDay.setHours(11);
+birthDay.setMinutes(25);
+birthDay.setSeconds(50);
+
+console.log(birthDay);
+console.log(val5);
