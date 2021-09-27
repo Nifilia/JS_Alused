@@ -307,3 +307,109 @@ birthDay.setSeconds(50);
 
 console.log(birthDay);
 console.log(val5);
+//Statments
+const id = 100;
+
+if(id == 100){
+	console.log("True");
+}else{
+	console.log("False");
+}
+
+//testId
+let testId;
+
+if(typeof testId !== "undefined"){
+	console.log(`id is ${testId}`);
+}else{
+	console.log("id missing");
+}
+
+//Advanced if's?
+if(id > 100){
+	console.log(`id on ${id} - larger then 100`);
+}else{
+	console.log(`id on ${id} - smaller or equal to 100`);
+}
+
+const colour = "red";
+if(colour == "Red"){
+	console.log("Stop");
+}else if(colour == "Yellow"){
+	console.log("Attention")
+}else if(colour == "Green"){
+	console.log("GO");
+}else{
+	console.log("Colour is not accepted");
+}
+
+const name6 = "Kadi";
+const age4 = 15;
+
+if(age4 > 0 && age4 <= 12){
+	console.log(`${name6} is a kid`);
+}else if(age4 > 12 && age <= 18){
+	console.log(`${name6} is a tennager`);
+}else{
+	console.log(`${name6} is an adult`);
+}
+
+if(age < 18 || age > 65){
+	console.log(`${name6} can not participate`);
+}else{
+	console.log(`${name6} can participate`);
+}
+
+if(id === 100){
+	console.log("Everything is correct");
+}else{
+	console.log("Everything is not correct");
+}
+
+const color = "Green";
+
+switch(color){
+	case "Red":
+		console.log("Stop");
+		break;
+	case "Yellow":
+		console.log("Attention");
+		break;
+	case "Green":
+		console.log("Go");
+		break;
+	default:
+		console.log("Color is not accepted");
+		break;
+}
+
+function getDayString(num){
+	var day;
+	switch(num){
+		case 0:
+			day = "Pühapäev";
+			break;
+		case 1:
+			day = "Esmaspäev";
+			break;
+		case 2:
+			day = "Teisipäev";
+			break;
+		case 3:
+			day = "Kolmapäev";
+			break;
+		case 4:
+			day = "Neljapäev";
+			break;
+		case 5:
+			day = "Reede";
+			break;
+		case 6:
+			day = "Laupäev";
+			break;
+	}
+	return day;
+}
+
+theDate = new Date();
+console.log("Täna on", getDayString(theDate.getDay()));
