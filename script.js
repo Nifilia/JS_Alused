@@ -365,7 +365,7 @@ if(id === 100){
 }else{
 	console.log("Everything is not correct");
 }
-
+//Switches
 const color = "Green";
 
 switch(color){
@@ -413,3 +413,55 @@ function getDayString(num){
 
 theDate = new Date();
 console.log("Täna on", getDayString(theDate.getDay()));
+//Loops
+//For Loop
+console.log("for loop starts")
+for(let i = 0; i < 10; i++){
+	if(i == 5){
+		break;
+	}
+	console.log(i);
+};
+//While loop
+console.log("While loop starts");
+let i = 0;
+while(i < 10){
+	console.log(i);
+	i++;
+}
+//do while loop
+console.log("do while loop starts");
+j = 0;
+do{
+	console.log(j);
+	j++;
+}while(j < 10);
+//Loops and arrays
+i = 0;
+console.log("Loops and arrays");
+const cars = ["Ford", "Audi", "Volkswagen", "BMW"];
+console.log(cars);
+for(let l; l < cars.length; l++){
+	console.log(cars[l]);
+};
+//forEach
+console.log("forEach starts");
+cars.forEach(function(element, index, array){
+	console.log(`cars[${index}] = ${element}`);
+});
+//forEach arrow funtion
+console.log("forEach arrow function starts");
+cars.forEach((element, index)=>{
+	console.log(`cars[${index}] = ${element}`);
+});
+//loops and Objects
+console.log("Loops and objects starts");
+const human = {
+	firstName1: "Katri",
+	surname1: "Tammepuu",
+	Age5: "27"
+};
+//for in loop
+for(let key in human){
+	console.log(`${key} = ${human[key]}`);
+};
