@@ -465,3 +465,39 @@ const human = {
 for(let key in human){
 	console.log(`${key} = ${human[key]}`);
 };
+//declearing a function
+function greeting(firstName2, surname2){
+	if(typeof firstName2 === "undefined"){
+		firstName2 = "Kadi"
+	};
+	if(typeof surname2 === "undefined"){
+		surname2 = "Tamm"
+	};
+	return "Tere, " + firstName2 + " " + surname2;
+};
+let greet = greeting("Andero", "Kõre");
+console.log(greet);
+
+console.log();
+
+const square = function(number = 3){
+	return number * number
+};
+console.log(square(5));
+
+//Self starting/Activating functions aka IIFE - Immediately invoked function expression
+(function(name7){
+	console.log("Tere " + name7);
+})("Madis");
+
+const todo = {
+	add: function(){
+		console.log("add todo ...")
+	},
+	edit: function(){
+		console.log(`edit todo nr ${id} ...`)
+	},
+	delete: function(){
+		console.log(`delete todo ...`)
+	}
+}
