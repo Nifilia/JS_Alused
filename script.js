@@ -167,7 +167,7 @@ const city = "Tartu";
 
 let html1;
 
-html1 = "<ul>" +
+/*html1 = "<ul>" +
 			"<li>" + name5 + "</li>" +
 			"<li>" + age3 + "</li>" +
 			"<li>" + job + "</li>" +
@@ -188,7 +188,7 @@ let html2 =
 
 console.log(html2);
 document.body.innerHTML = html2;
-
+*/
 //Array but advanced
 const numbers1 = [43, 56, 21, 79, 32];
 const numbers2 = new Array(22, 98, 9, 21, 65);
@@ -501,3 +501,31 @@ const todo = {
 		console.log(`delete todo ...`)
 	}
 }
+todo.add();
+todo.edit();
+todo.delete();
+
+
+/*
+
+val = document.getElementById("task-title");
+val = document.getElementById("task-title").id;
+val = document.getElementById("task-title").className;
+
+const taskTitle = document.getElementById("task-title")
+
+//Styles changes through js
+taskTitle.style.background = "#333";
+taskTitle.style.color = "#fff";
+taskTitle.style.padding = "box";
+//taskTitle.style.display = "none";
+
+//content changes through js
+taskTitle.textContent = "my tasks";
+taskTitle.innerText = "my favorite things";
+taskTitle.innerHTML = `<span styles="color: red">My Tasks</span>`
+
+val = document.querySelector("#task-title");
+val = document.querySelector("card-title");
+val = document.querySelector("h2");
+*/
