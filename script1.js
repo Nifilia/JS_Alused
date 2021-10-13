@@ -1,54 +1,48 @@
-//const's for colors
-const oddLi = document.querySelectorAll("li:nth-child(odd)");
-const evenLi = document.querySelectorAll("li:nth-child(even)");
-//background color change
-oddLi.forEach(function(li){
-	li.style.background = "black";
-})
-evenLi.forEach(function(li){
-	li.style.background = "white";
-})
-//text color change
-oddLi.forEach(function(li){
-	li.style.color = "white";
-})
-evenLi.forEach(function(li){
-	li.style.color = "black";
-})
+// event elements
+const form = document.querySelector('form');
+const taskInput = document.querySelector('#task');
+const taskList = document.querySelector('ul')
+const remAll = document.getElementById('remAllbtn')
 
+// submit 
+form.addEventListener('submit', addToList)
 
-//
-let val;
-const list = document.querySelector("ul");
-const listItem = document.querySelector("li:first-child");
+function addToList(e) {
+	const li = document.createElement('li');
+	const list = document.querySelector('ul');
 
-val = list;
-val = listItem;
+	li.className = 'collection-item';
+	li.appendChild(document.createTextNode(taskInput.value));
 
-val = list.childNodes;
-val = list.childNodes[0];
-val = list.childNodes[0].nodeName;
-val = list.childNodes[0].nodeType;
+	const link = document.createElement('a');
+	link.className = 'secondary-content'
+	link.appendChild(document.createTextNode('X'));
+	link.setAttribute('href', '#')
 
-val = list.children;
-val = list.children[1];
-list.children[1].textContent = "Study C++";
+	li.appendChild(link);
+	list.appendChild(li);
 
-list.children[2].children[0];
-list.children[2].children.id = "test-id";
+	taskInput.value = '';
 
-val = list.firstChild;
-val = list.firstElementChild;
-val = list.lastChild;
-val = list.lastElementChild;
+	e.preventDefault();
+}
 
-val = list.childElementCount;
+// click
+taskList.addEventListener('click', removeFromList)
+remAll.addEventListener('click', removeAll)
 
-val = listItem.parentNode;
-val = listItem.parentElement;
-val = listItem.parentElement.parentElement;
-val = listItem.nextSibling;
-val = listItem.nextElementSibling;
-val = listItem.nextElementSibling.nextElementSibling.previousElementSibling;
+function removeFromList(e) {
+	if (e.target.textContent == 'X') {
+		if (confirm('Are you sure you want to delete this task?')) {
+			e.target.parentElement.remove();
+		}
+	}
+}
 
-console.log(val);
+function removeAll(e) {
+	if (confirm('Are you sure you want to delete all task?')) {
+		if (e.target.id == 'remAllbtn') {
+			taskList.innerHTML = '';
+		}
+	}
+}

@@ -1,3 +1,4 @@
+/*
 //Variables
 //var, let, const
 
@@ -66,6 +67,7 @@ console.log(typeof hobbies);
 console(typeof person2);
 */
 //Date object
+/*
 const today = new Date();
 console.log(typeof today);
 console.log(today);
@@ -190,6 +192,7 @@ console.log(html2);
 document.body.innerHTML = html2;
 */
 //Array but advanced
+/*
 const numbers1 = [43, 56, 21, 79, 32];
 const numbers2 = new Array(22, 98, 9, 21, 65);
 const fruits = ["Strawberry", "Apple", "Orange", "Cherry", "Pear"];
@@ -282,6 +285,7 @@ for(let i = 0; i < multiSapiens.length; i++){
 }
 */
 //Time things
+/*
 let val5;
 
 const today2 = new Date();
@@ -505,9 +509,6 @@ todo.add();
 todo.edit();
 todo.delete();
 
-
-/*
-
 val = document.getElementById("task-title");
 val = document.getElementById("task-title").id;
 val = document.getElementById("task-title").className;
@@ -528,4 +529,58 @@ taskTitle.innerHTML = `<span styles="color: red">My Tasks</span>`
 val = document.querySelector("#task-title");
 val = document.querySelector("card-title");
 val = document.querySelector("h2");
+//const's for colors
+const oddLi = document.querySelectorAll("li:nth-child(odd)");
+const evenLi = document.querySelectorAll("li:nth-child(even)");
+//background color change
+oddLi.forEach(function(li){
+	li.style.background = "black";
+})
+evenLi.forEach(function(li){
+	li.style.background = "white";
+})
+//text color change
+oddLi.forEach(function(li){
+	li.style.color = "white";
+})
+evenLi.forEach(function(li){
+	li.style.color = "black";
+})
+
+
+//
+let val;
+const list = document.querySelector("ul");
+const listItem = document.querySelector("li:first-child");
+
+val = list;
+val = listItem;
+
+val = list.childNodes;
+val = list.childNodes[0];
+val = list.childNodes[0].nodeName;
+val = list.childNodes[0].nodeType;
+
+val = list.children;
+val = list.children[1];
+list.children[1].textContent = "Study C++";
+
+list.children[2].children[0];
+list.children[2].children.id = "test-id";
+
+val = list.firstChild;
+val = list.firstElementChild;
+val = list.lastChild;
+val = list.lastElementChild;
+
+val = list.childElementCount;
+
+val = listItem.parentNode;
+val = listItem.parentElement;
+val = listItem.parentElement.parentElement;
+val = listItem.nextSibling;
+val = listItem.nextElementSibling;
+val = listItem.nextElementSibling.nextElementSibling.previousElementSibling;
+
+console.log(val);
 */
